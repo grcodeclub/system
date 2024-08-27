@@ -1,17 +1,17 @@
-$(document).ready(function() {
-    var  menuLink = '<li><a href="https://grcodeclub.github.io">Αρχική Σελίδα</a></li>';
-    $('.sidebarMenuInner').append(menuLink);
+
+window.onload = function() {
+    var menuLinks = [
+        '<li><a href="https://grcodeclub.gr">Αρχική Σελίδα</a></li>',
+        '<li><a href="https://grcodeclub.github.io/system/android">Android</li>',
+        '<li><a href="https://grcodeclub.github.io/system/android/versions">Eκδόσεις</a></li>',
+        '<li><a href="https://grcodeclub.github.io/system">Λειτουργικά Συστήματα</a></li>',
+        '<li style="height: 200px;"></li>'
+    ];
     
-    menuLink = ' <li><a href="https://grcodeclub.github.io/system/android">Android</a></li>';
-    $('.sidebarMenuInner').append(menuLink);
-
-    menuLink = ' <li><a href="https://grcodeclub.github.io/system/android/versions">Eκδόσεις</a></li>';
-    $('.sidebarMenuInner').append(menuLink);
-
-    menuLink = ' <li><a href="https://grcodeclub.github.io/system/android/more">Περισσότερα</a></li>';
-    $('.sidebarMenuInner').append(menuLink);
-
-    menuLink = ' <li><a href="https://grcodeclub.github.io/system">Λειτουργικό Σύστημα</a></li>';
-    $('.sidebarMenuInner').append(menuLink);
-  });
-  
+    var $sidebarMenuInners = document.querySelectorAll('.sidebarMenuInner');
+    $sidebarMenuInners.forEach(function($sidebarMenuInner) {
+    menuLinks.forEach(function(link) {
+        $sidebarMenuInner.insertAdjacentHTML('beforeend', link);
+    });
+});
+};
