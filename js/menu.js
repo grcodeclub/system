@@ -6,7 +6,7 @@ window.onload = function() {
         '<li><a href="https://grcodeclub.github.io/windows">Microsoft Windows</a></li>',
         '<li><a href="https://grcodeclub.github.io/linux">Linux</li>',
         '<li><a href="https://grcodeclub.github.io/system/android">Android</li>',
-        '<li style="height: 200px;"></li>';
+        '<li style="height: 200px;"></li>'
     ];
     
     var $sidebarMenuInners = document.querySelectorAll('.sidebarMenuInner');
